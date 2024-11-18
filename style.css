@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #300350;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+header {
+
+    background: linear-gradient(45deg, #9B26B6 25%, transparent 25%, transparent 75%, #9B26B6 75%, #9B26B6),
+        linear-gradient(45deg, #9B26B6 25%, transparent 25%, transparent 75%, #9B26B6 75%, #9B26B6);
+    background-size: 20px 20px;
+    /* Adjust the size of the checkered pattern */
+    background-color: #300350;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+nav {
+    background-color: #94167f;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav a:active {
+    background-color: #153cb4;
+    color: white;
+}
+
+nav a.current {
+    background-color: #153cb4;
+    color: white;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+section {
+    padding: 20px;
+}
