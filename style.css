@@ -4,7 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     color: #fff;
-    background-color: #300350;
+    background-color: #070122;
 }
 
 .blink {
@@ -23,7 +23,7 @@ header {
         linear-gradient(45deg, #9B26B6 25%, transparent 25%, transparent 75%, #9B26B6 75%, #9B26B6);
     background-size: 20px 20px;
     /* Adjust the size of the checkered pattern */
-    background-color: #300350;
+    background-color: #070122;
     color: #fff;
     text-align: center;
     padding: 10px;
