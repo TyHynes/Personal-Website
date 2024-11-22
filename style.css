@@ -67,3 +67,21 @@ img {
 section {
     padding: 20px;
 }
+
+.profile-pic {
+    padding-right: 15px; /* Add space to the right */
+    padding-bottom: 10px; /* Add space to the bottom */
+}
+
+.about-me {
+    background: #182241;
+    color: #ffffff;
+    padding: 20px;
+    display: flex; /* Enable Flexbox for this section */
+    align-items: center; /* Align items vertically in the center */
+    gap: 20px; /* Add spacing between the image and text */
+}
+
+.about-me img {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+}
