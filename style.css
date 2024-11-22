@@ -1,32 +1,20 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 30px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
-    background-color: #070122;
-}
-
-.blink {
-    animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+    color: #000000;
+    background-color: #ffffff;
 }
 
 header {
-
-    background: linear-gradient(45deg, #9B26B6 25%, transparent 25%, transparent 75%, #9B26B6 75%, #9B26B6),
-        linear-gradient(45deg, #9B26B6 25%, transparent 25%, transparent 75%, #9B26B6 75%, #9B26B6);
-    background-size: 20px 20px;
-    /* Adjust the size of the checkered pattern */
-    background-color: #070122;
+    background-color: #000000;
     color: #fff;
     text-align: center;
-    padding: 10px;
+}
+
+body {
+    margin: 20;
 }
 
 footer {
@@ -35,14 +23,14 @@ footer {
 }
 
 nav {
-    background-color: #94167f;
-    overflow: hidden;
+    background-color: #010d31;
+    overflow: auto;
 }
 
 nav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
