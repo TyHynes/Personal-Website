@@ -1,57 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/x-icon" href="../Images/favicon.jpg">
+    <link rel="icon" type="image/jpeg" href="../Images/favicon.png">
+    <link rel="stylesheet" href="../Style.css">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <img src="../Images/Logo.jpg" alt="TyHy.xyz">
-        </div>
-        <nav>
-            <a href="../">Home</a>
-            <a href="../Blog">Blog</a>
-            <a class="current" href="index.html">Projects</a>
-            <a href="../Contact">Contact</a>
-        </nav>
+
+    <div class="main-interface">
         
-    </header>
-    <main>
-        <section id="projects">
-            <h1>Projects</h1>
-            <div class="project">
-                <img src="Epic Website.JPG" alt="Epic Site's Header" width="600" height="700" align="right">
-                <h2>Ty's Website</h2>
-                <p>You're Looking at it! This is Project 1, My Own Website. The Goal is to use this website as a
-                    portfolio of sorts, documenting my works and projects to do over the years
-                    As of November 17th, its not much of a looker, and initally made this site to resemble the style of
-                    the pre-millenia internet (and totally not the lack of my own HTML/CSS Skills)
-                    Considering that I'm hosting this on <a
-                        href="https://github.com/TyHynes/Personal-Website">Github</a> and you can just press F12 on Most
-                    Browsers to access the raw files, Heres the Github Link to this Project:
-                    <a
-                        href="https://github.com/TyHynes/Personal-Website">https://github.com/TyHynes/Personal-Website</a>
-                </p>
-            </div>
+        <div class="header-banner">
+            <span style="font-size: 2rem; vertical-align: middle; color: yellow; font-weight: bold;">TyHy.xyz</span>
+        </div>
 
-            <!--    <div class="project">
-              <img src="project2.jpg" alt="Project 2">
-                <h2>Project 2</h2>
-                <p>Description of Project 2 goes here. Add relevant information about the project to showcase its key
-                    features and aspects.</p>
-            </div>  -->
-        </section>
-    </main>
-    </Main>
-    <footer>
-        Website made by Ty using Blood Sweat and Tears (With a Little Help from Chatgpt)
-    </footer>
+
+        <div class="marquee-bar">
+            <marquee scrollamount="8">
+                🚧 IF I FIND OUT SOMEBODY STOLE MY IDEA, I WILL SUE (JK) 🚧
+            </marquee>
+        </div>
+        <nav class="nav">
+            <a href="../index.html" class="nav-btn">🏠 Home</a>
+            <a href="../blog/index.html" class="nav-btn">💾 Blog</a>
+            <a href="../projects/index.html" class="nav-btn" style="background: yellow;">🕹️ Projects</a>
+            <a href="../music/index.html" class="nav-btn">🎵 Music</a>
+            <a href="../contact/index.html" class="nav-btn">📧 Contact</a>
+        </nav>
+
+        <div class="content-grid">
+            <main>
+                <h1>🕹️ Current Projects</h1>
+                <p>Here is a list of things I am currently working on or thinking about.</p>
+
+                <section class="data-panel">
+                    <h2>🌐 TyHy.xyz </h2>
+                    <p>
+                        <span class="tag tag-dev">IN DEVELOPMENT</span> <span class="tag">HTML/CSS</span>
+                    </p>
+                    <p>
+                        My personal corner of the web. I'm trying to bring back the feeling of the early 2000s internet.
+                        Currently working on adding more pages and fixing the layout.
+                    </p>
+                    <ul>
+                        <li><b>Goal:</b> Replicate Early Internet Aesthetics</li>
+                        <li><b>Tools:</b> HTML, CSS, JS</li>
+                        <li><b>Status:</b> <span class="blink">UNDER CONSTRUCTION</span></li>
+                    </ul>
+                </section>
+
+                <section class="data-panel">
+                    <h2>👁️ 21st Century Man</h2>
+                    <p>
+                        <span class="tag tag-concept">CONCEPT</span> <span class="tag">Game</span>
+                    </p>
+                    <p>
+                        A "Doomer Shooter" and Immersive Sim where you play as a recluse tax dodger.
+                        The game features an AI voice in your head that might be real, or might it be schizophrenia.
+                    </p>
+                </section>
+
+                <section class="data-panel">
+                    <h2>🚀 Generations Lost</h2>
+                    <p>
+                        <span class="tag tag-concept">CONCEPT</span> <span class="tag">Game</span>
+                    </p>
+                    <p>
+                        A 3D Visual Novel with turn-based combat set on a generation ship traveling to Alpha Centauri.
+                    </p>
+                    </table>
+                </section>
+
+            </main>
+
+            <aside class="ad-container">
+                <div class="matrix-ad" style="text-align: center;">
+                    <p>SEEK REALITY.</p>
+                    <p>THE FEDS ARE WATCHING.</p>
+                </div>
+
+                <div class="fake-ad" style="background: navy; color: white;">
+                    <h3 style="margin:0;">GENESIS CORP</h3>
+                    <p style="font-size: 0.7rem;">SECURING TOMORROW TODAY</p>
+                    <button style="background: gray; color: black;">ENLIST NOW</button>
+                </div>
+                
+                 <div class="fake-ad" style="background: black; color: red; border: 2px solid red;">
+                    <p style="font-family: 'Courier New';">🚫 DO NOT CLICK 🚫</p>
+                    <p style="font-size: 0.7rem;">VIRUS.EXE</p>
+                </div>
+
+                <div style="text-align: center; border: 2px bevel gray; background: black; padding: 5px;">
+                    <span style="color: red; font-family: 'Courier New'; font-weight: bold; letter-spacing: 3px;">001337</span>
+                    <br>
+                    <span style="font-size: 0.6rem;">VISITORS</span>
+                </div>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2003 - 2026 TyHy.xyz</p>
+    </div>
 </body>
-
 </html>

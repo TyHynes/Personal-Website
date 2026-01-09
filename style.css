@@ -1,87 +1,303 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* ========== GLOBAL STYLES ========== */
+:root {
+    --bg-color: #000000;
+    --neon-cyan: #00ffff;
+    --neon-pink: #ff00ff;
+    --neon-green: #39ff14;
+    --matrix-bg: url('https://upload.wikimedia.org/wikipedia/commons/3/3a/Digital_rain_animation_medium_letters_shine.gif');
+    --font-stack: 'Courier New', Courier, monospace;
+}
+
+* {
     box-sizing: border-box;
-    color: #000000;
-    background-color: #ffffff;
-}
-
-header {
-    background-color: #000000;
-    color: #fff;
-    text-align: center;
 }
 
 body {
-    margin: 20;
-}
-
-footer {
-    text-align: center;
-    font-size: 12px;
-}
-
-nav {
-    background-color: #010d31;
-    overflow: auto;
-}
-
-nav a {
-    float: left;
-    display: block;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(white 1px, transparent 1px),
+                      radial-gradient(white 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
     color: #ffffff;
+    font-family: var(--font-stack);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* The Main Container */
+.main-interface {
+    width: 100%;
+    max-width: 900px;
+    border: 4px ridge var(--neon-cyan);
+    background-color: rgba(0, 0, 20, 0.9);
+    box-shadow: 10px 10px 0px rgba(0, 255, 255, 0.2);
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+/* Animated Header Banner */
+.header-banner {
+    background: linear-gradient(90deg, #000, #000044, #000);
     text-align: center;
-    padding: 14px 16px;
+    border-bottom: 3px solid var(--neon-cyan);
+    padding: 10px;
+}
+
+/* Scrolling Marquee */
+.marquee-bar {
+    background-color: var(--neon-pink);
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid white;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Layout Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 3fr 1.5fr;
+    }
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: var(--neon-cyan);
+    text-shadow: 2px 2px #ff00ff;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--neon-green);
+    border-bottom: 1px dashed white;
+    padding-bottom: 5px;
+}
+
+a {
+    color: yellow;
     text-decoration: none;
 }
 
-nav a:hover {
-    background-color: #ddd;
+a:hover {
+    color: red;
+    background-color: yellow;
+    cursor: help;
+}
+
+.blink {
+    animation: blinker 0.8s step-end infinite;
+    color: red;
+    background: yellow;
+    padding: 0 5px;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+/* Panels */
+.data-panel {
+    border: 2px inset white;
+    background: #000033;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Navigation Buttons */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background: #222;
+    border-bottom: 2px solid gray;
+}
+
+.nav-btn {
+    background: silver;
+    border: 2px outset white;
+    color: black;
+    padding: 5px 15px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-btn:active {
+    border-style: inset;
+}
+
+/* Ad Container */
+.ad-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fake-ad {
+    border: 2px outset #ffffff;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ad 1: The Winner Ad */
+.ad-winner {
+    background: blue;
+    animation: flash-bg 0.5s infinite;
+}
+
+@keyframes flash-bg {
+    0% { background: blue; }
+    50% { background: red; }
+    100% { background: blue; }
+}
+
+.ad-winner h3 {
+    margin: 0;
+    color: yellow;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px black;
+}
+
+/* Ad 2: Download RAM */
+.ad-download {
+    background: linear-gradient(to bottom, #cccccc, #999999);
     color: black;
 }
 
-nav a:active {
-    background-color: #153cb4;
+.dl-btn {
+    background: green;
     color: white;
+    padding: 5px;
+    border: 2px outset white;
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: bold;
 }
 
-nav a.current {
-    background-color: #153cb4;
-    color: white;
+/* Ad 3: Matrix/Hacker */
+.matrix-ad {
+    background-image: var(--matrix-bg);
+    background-size: cover;
+    border: 1px solid lime;
+    padding: 10px;
+    color: var(--neon-green);
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    font-family: 'Courier New', monospace;
 }
 
-.container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-section {
-    padding: 20px;
-}
-
+/* Profile Pic Style */
 .profile-pic {
-    padding-right: 15px; /* Add space to the right */
-    padding-bottom: 10px; /* Add space to the bottom */
+    width: 100%;
+    border: 2px solid var(--neon-cyan);
+    image-rendering: pixelated;
 }
 
-.about-me {
-    background: #182241;
-    color: #ffffff;
-    padding: 20px;
-    display: flex; /* Enable Flexbox for this section */
-    align-items: center; /* Align items vertically in the center */
-    gap: 20px; /* Add spacing between the image and text */
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
 }
 
-.about-me img {
-    flex-shrink: 0; /* Prevent the image from shrinking */
+/* ========== BLOG PAGE SPECIFIC STYLES ========== */
+
+.date-stamp {
+    color: gray;
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+/* ========== MUSIC PAGE SPECIFIC STYLES ========== */
+
+.song-card {
+    border: 2px inset white;
+    background: #111;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.album-art {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: gray;
+}
+
+.song-info {
+    flex-grow: 1;
+}
+
+.song-title {
+    color: var(--neon-pink);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.band-name {
+    color: var(--neon-cyan);
+    margin: 5px 0;
+}
+
+.lyric-line {
+    font-size: 0.75rem;
+    margin-top: 8px;
+    color: #ddd;
+    font-style: italic;
+    padding-top: 3px;
+}
+
+/* ========== PROJECTS PAGE SPECIFIC STYLES ========== */
+
+.tag {
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border: 1px solid white;
+    margin-right: 5px;
+}
+
+.tag-dev {
+    background: blue;
+}
+
+.tag-concept {
+    background: purple;
 }

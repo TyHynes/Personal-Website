@@ -1,48 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/x-icon" href="../Images/favicon.jpg">
+    <title>Blog</title>
+    <link rel="icon" type="image/jpeg" href="../Images/favicon.png">
+    <link rel="stylesheet" href="../Style.css">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <img src="../Images/Logo.jpg" alt="TyHy.xyz">
-        </div>
-        <nav>
-            <a href="../">Home</a>
-            <a class="current" href="index.html">Blog</a>
-            <a href="../Projects">Projects</a>
-            <a href="../Contact">Contact</a>
-        </nav>        
-    </header>
-    <Main>
-        <section id="blog">
-            <h1>Bloggers</h1>
-            <article>
-                <h2>November 22, 2024</h2>
-                <p>Begone Ugly Purple! Hello White Black and Blue. Reorganized files to be better to organize and future proof. Rewrote Home Page to be a bit better, still empty though :(
-                    Honestly though, so far these blogs have just been Website update notes :/
-                </p>
-            </article>
-            <article>
-                <h2>November 17, 2024</h2>
-                <p>This Website is Now on the World Wide Web! Extra Cool (Don't ask why it took 7 Months to do)</p>
-            </article>
-            <article>
-                <h2>March 11, 2024</h2>
-                <p>Made this Website, very cool</p>
-            </article>
-        </section>
-        <footer>
-            Website made by Ty using Blood Sweat and Tears (With a Little Help from Chatgpt)
-        </footer>
-    </Main>
-</body>
 
+    <div class="main-interface">
+        
+         <div class="header-banner">
+            <span style="font-size: 2rem; vertical-align: middle; color: yellow; font-weight: bold;">TyHy.xyz</span>
+        </div>
+
+
+        <div class="marquee-bar">
+            <marquee scrollamount="8">
+                🚧 UPDATES POSTED RANDOMLY 🚧 PURE RAW THOUGHTS 🚧
+            </marquee>
+        </div>
+
+        <nav class="nav">
+            <a href="../index.html" class="nav-btn">🏠 Home</a>
+            <a href="../blog/index.html" class="nav-btn" style="background: yellow;">💾 Blog</a>
+            <a href="../projects/index.html" class="nav-btn">🕹️ Projects</a>
+            <a href="../music/index.html" class="nav-btn">🎵 Music</a>
+            <a href="../contact/index.html" class="nav-btn">📧 Contact</a>
+        </nav>
+
+        <div class="content-grid">
+            <main>
+                <h1>💾 Bloggers</h1>
+
+                <section class="data-panel">
+                    <h2>New Site, New Me</h2>
+                    <p class="date-stamp">Posted: January 9, 2026</p>
+                    <p>
+                       Again, I updated the Site. The old one, Simply sucks ass, and considering i accientally paid for the domain again, might as well do something about it. 
+                       This time going full balls to the walls on the theming. Neocities Y2K theme. Fake ads, and more. Added a Music Section. Might actually work on this more.
+                       I really like the look of it. Obviously its just HTML and CSS for now, no Javascript, but i wanna add more things to it, including a way to update the pages within the website and without manually editing the HTML
+                       But, for now, I am proud.
+                    </p>
+                </section>
+                
+                <section class="data-panel">
+                    <h2>November 22, 2024</h2>
+                    <p class="date-stamp">Posted: November 22, 2024</p>
+                    <p>
+                        Begone Ugly Purple! Hello White Black and Blue. Reorganized files to be better to organize and future proof. Rewrote Home Page to be a bit better, still empty though :(
+                        Honestly though, so far these blogs have just been Website update notes :/
+                    </p>
+                </section>
+
+                <section class="data-panel">
+                    <h2>November 17, 2024</h2>
+                    <p class="date-stamp">Posted: November 17, 2024</p>
+                    <p>
+                        This Website is Now on the World Wide Web! Extra Cool (Don't ask why it took 7 Months to do)
+                    </p>
+                </section>
+
+                <section class="data-panel">
+                    <h2>March 11, 2024</h2>
+                    <p class="date-stamp">Posted: March 11, 2024</p>
+                    <p>
+                        Made this Website, very cool
+                    </p>
+                </section>
+
+            </main>
+
+            <aside class="ad-container">
+                <div class="fake-ad ad-winner">
+                    <h3 class="blink">CLICK HERE!</h3>
+                    <p style="color: white; font-weight: bold; margin: 5px;">WIN A FREE IPOD!</p>
+                </div>
+
+                <div class="fake-ad" style="background: white; color: black; border: 2px solid black;">
+                    <p><b>WEB RING</b></p>
+                    <p style="font-size: 0.7rem;">[Prev] [Random] [Next]</p>
+                </div>
+
+                <div style="text-align: center; border: 2px bevel gray; background: black; padding: 5px;">
+                    <span style="color: red; font-family: 'Courier New'; font-weight: bold; letter-spacing: 3px;">001337</span>
+                    <br>
+                    <span style="font-size: 0.6rem;">VISITORS</span>
+                </div>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2003 - 2026 TyHy.xyz</p>
+        </footer>
+    </div>
+</body>
 </html>
