@@ -17,7 +17,7 @@ body {
     padding: 20px;
     background-color: var(--bg-color);
     background-image: radial-gradient(white 1px, transparent 1px),
-                      radial-gradient(white 1px, transparent 1px);
+        radial-gradient(white 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: 0 0, 25px 25px;
     color: #ffffff;
@@ -75,7 +75,9 @@ body {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -113,7 +115,9 @@ a:hover {
 }
 
 @keyframes blinker {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 /* Panels */
@@ -175,9 +179,17 @@ a:hover {
 }
 
 @keyframes flash-bg {
-    0% { background: blue; }
-    50% { background: red; }
-    100% { background: blue; }
+    0% {
+        background: blue;
+    }
+
+    50% {
+        background: red;
+    }
+
+    100% {
+        background: blue;
+    }
 }
 
 .ad-winner h3 {
@@ -240,49 +252,163 @@ footer {
     font-style: italic;
 }
 
-/* ========== MUSIC PAGE SPECIFIC STYLES ========== */
+/* ========== MUSIC GRID STYLES ========== */
 
-.song-card {
-    border: 2px inset white;
-    background: #111;
-    padding: 15px;
-    margin-bottom: 20px;
-    display: flex;
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px;
-    align-items: center;
 }
 
-.album-art {
-    width: 100px;
-    height: 100px;
-    border: 2px solid white;
+.music-card {
+    border: 2px outset white;
+    background: #111;
+    padding: 5px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.album-art-lg {
+    width: 100%;
+    aspect-ratio: 1/1;
     object-fit: cover;
-    flex-shrink: 0;
+    border: 1px solid white;
     background: gray;
 }
 
-.song-info {
-    flex-grow: 1;
-}
-
-.song-title {
+.song-title-lg {
     color: var(--neon-pink);
-    font-size: 1.2rem;
     font-weight: bold;
-    margin: 0;
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    line-height: 1.2;
 }
 
-.band-name {
+.artist-name-lg {
     color: var(--neon-cyan);
-    margin: 5px 0;
+    font-size: 0.8rem;
+    margin: 2px 0;
 }
 
-.lyric-line {
-    font-size: 0.75rem;
-    margin-top: 8px;
-    color: #ddd;
+.album-name-lg {
+    color: gray;
+    font-size: 0.7rem;
     font-style: italic;
-    padding-top: 3px;
+    margin-bottom: 5px;
+}
+
+/* ========== MEDIA HUB STYLES ========== */
+
+.media-portal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.media-btn {
+    background: #000;
+    border: 2px solid var(--neon-cyan);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.media-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--neon-cyan);
+    background: #111;
+}
+
+.media-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.media-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--neon-pink);
+}
+
+/* ========== MOVIES & TV STYLES ========== */
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.movie-card {
+    border: 2px outset white;
+    background: #220022;
+    padding: 5px;
+    text-align: center;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid white;
+    background: black;
+}
+
+.movie-title {
+    color: var(--neon-cyan);
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.movie-rating {
+    color: yellow;
+    font-size: 0.8rem;
+}
+
+/* ========== ART GALLERY STYLES ========== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Adjusted directly to be closer to media but slightly larger */
+    gap: 20px;
+}
+
+.art-piece {
+    border: 2px outset white;
+    background: #220022;
+    padding: 5px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.art-piece:hover {
+    transform: scale(1.02);
+    border-color: var(--neon-pink);
+}
+
+.art-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid white;
+    background: black;
+    display: block;
+}
+
+.art-caption {
+    color: var(--neon-cyan);
+    font-family: var(--font-stack);
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-style: normal;
 }
 
 /* ========== PROJECTS PAGE SPECIFIC STYLES ========== */
@@ -300,4 +426,144 @@ footer {
 
 .tag-concept {
     background: purple;
+}
+
+/* ========== LIGHTBOX MODAL STYLES ========== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 20px var(--neon-cyan);
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: var(--neon-pink);
+    padding: 10px 0;
+    height: 150px;
+    font-family: var(--font-stack);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 1002;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+/* Responsive Modal */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 95%;
+    }
+
+}
+
+/* ========== BLOG COLLAPSE STYLES ========== */
+
+.blog-collapsed {
+    max-height: 100px;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.read-more-btn {
+    display: block;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    color: yellow;
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: var(--font-stack);
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0;
+}
+
+.read-more-btn:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
 }
